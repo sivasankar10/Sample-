@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div>
+        <button id="btn" onclick="add()">Add Hello</button>
+        <button id="btn2" onclick="change()">Change Color</button>
+        <div id="result"></div>
+    </div>
+
+    
+     <script>
+        var btn = document.getElementById('btn')
+        var result = document.getElementById('result')
+        
+        function add(){
+          var update = document.createElement("h1")
+          update.textContent = "Hello"
+          result.append(update)
+        }
+        var chcolor= document.getElementById("btn2")
+
+        function change(){
+            chcolor.style.backgroundColor= "red"
+        }
+           
+     </script>
+</body>
+</html>

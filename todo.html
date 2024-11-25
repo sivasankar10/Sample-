@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn {
+            background-color: red;
+            color: white;
+            margin-left: 20px;
+        }
+
+        .main {
+            margin-left: 38%;
+            margin-top: 9.3%;
+            width: 500px;
+            height: 500px;
+            text-align: left;
+            background-color: aqua;
+            
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main">
+    <label for="todo-input">Todo:</label>
+    <input type="text" id="todo-input" title="Enter your todo item" placeholder="Enter your todo item">
+    <button onclick="add(event)">Add</button>
+
+    <ul  id="list-cont">
+        <li>
+            hello <button class="btn" onclick="del(event)">Delete</button>
+        </li>
+        
+    </ul>
+    </div>
+
+    <script>
+        var input = document.getElementById("todo-input");
+        var listitem = document.querySelector("#list-cont"); 
+        function add(event) {
+             var li = document.createElement("li")
+             li.innerHTML = input.value+ "<button class='btn' onclick='del(event)'>Delete</button>" 
+             listitem.append(li)
+        }
+
+        function del(event) {
+             event.target.parentElement.remove()
+        }
+    </script>
+</body>
+</html>

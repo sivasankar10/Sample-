@@ -1,0 +1,23 @@
+<!DOCTYPE html>  <!--live text content display -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="userinput"></label>
+    <input id="userinput" onkeyup="dispplaytext()">
+
+    <h1 id="textarea"></h1>
+
+    <script>
+        var display = document.getElementById("textarea")
+        var input = document.getElementById("userinput")
+
+        function dispplaytext() {
+            display.textContent = input.value
+        }
+    </script>
+</body>
+</html>

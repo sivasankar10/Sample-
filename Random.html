@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link href="./filename.js"> -->
+</head>
+<body>
+    <h1>Guess the Number !</h1>
+     <p> 1 to 10 </p>
+    <label for="guessno">Enter Number : </label>
+    <input type="text" id="guessno">
+
+    <button onclick="check()">check</button>
+
+    <p id="status"> You are Wrong/right </p>
+    <p id="score">Score :10</p>
+
+    <script>
+        var gno = document.getElementById("guessno")
+        var stat = document.getElementById("status")
+        var score = document.getElementById("score")
+        var totscore = 10;
+
+        function check(){
+            let a = Math.random()
+            let b = Math.floor(a *10)+1 
+            console.log(b);
+            
+            var userinput = gno.value
+
+            if ( userinput == b) 
+        {
+            totscore = totscore + 1
+            stat.textContent = "You WON"
+            alert("YOU WON")
+            score.textContent = "Score:"+totscore 
+
+        } else {
+            totscore = totscore - 1
+            stat.textContent = "You Lost"
+            score.textContent = "Score:"+totscore 
+        }
+            
+        }
+    </script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            transition: 1s;
+        }
+
+        .widthmax {
+            width: 900px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="box"></div>
+    <div>
+        <button onclick="change()">Change</button>
+        <button onclick="reverse()">Reverse</button>
+        <button onclick="extend()">Extend</button>
+    </div>
+    
+    <script>
+        var boxx = document.getElementById("box");
+        function change() {
+            boxx.style.backgroundColor = "red";
+        }
+        function reverse() {
+            boxx.style.backgroundColor = "blue";
+        }
+        function extend() {
+            boxx.classList.add("widthmax");
+        }
+    </script>
+    
+</body>
+</html>

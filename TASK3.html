@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <h1 id="result">Name</h1>
+    </div>
+    <button onclick="disp(event)">Siva</button>
+    <button onclick="disp(event)">Mey</button>
+    <button onclick="disp(event)">Pravesh</button> 
+
+    <script>
+        var h1 = document.getElementById("result");
+        
+        function disp(event) {
+            h1.textContent = event.target.textContent;
+        }
+    </script>
+
+</body>
+</html>
